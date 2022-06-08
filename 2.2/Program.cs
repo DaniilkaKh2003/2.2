@@ -9,7 +9,7 @@ namespace Sample6
             uint DAYS = 0;
             uint[] DAY = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
             uint[] VDAY = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-            Console.Write("Введите дату по юлианскому календарю (например: 08.07.2003): ");
+            Console.Write("Введите дату по юлианскому календарю (например: 10.07.2003): ");
             var DATA = Console.ReadLine().ToString().Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
             uint a = Convert.ToUInt32(DATA[0]);
             uint b = Convert.ToUInt32(DATA[1]);
@@ -40,7 +40,7 @@ namespace Sample6
             }
             DAYS = DAYS + a;
             uint A, B, C;
-            uint x = a + UDAYS - DAYS;
+            uint x = a + UDAYS - DAYS - 2;
             Console.Write("Дата по современному календарю: ");
             if ((c % 4 == 0 && c % 100 != 0) || (c % 400 == 0))
             {
